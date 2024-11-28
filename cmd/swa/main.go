@@ -31,7 +31,7 @@ func main() {
 
 func prepareDB() {
 	var err error
-	dsn := "host=localhost user=test password=123 dbname=swa port=5432 sslmode=disable TimeZone=Europe/Berlin"
+	dsn := "host=db user=test password=123 dbname=swa port=5432 sslmode=disable TimeZone=Europe/Berlin"
 	if db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{}); err != nil {
 		panic("failed to connect database")
 	}

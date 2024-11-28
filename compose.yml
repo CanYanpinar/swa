@@ -9,10 +9,9 @@ services:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: 123
       POSTGRES_DB: swa
-    ports:
-      - 5432:5432
     volumes:
       - swa:/var/lib/postgresql/data
+
   server:
     container_name: swa-server
     build:
